@@ -163,8 +163,3 @@ For a stronger production deployment, future upgrades can include:
 - Audit logs
 - Role-specific admin controls
 
-## Author
-
-**K Dhanvardhan**  
-Computer Science Student  
-Hyderabad, Telangana, India
