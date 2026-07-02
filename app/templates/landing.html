@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="hero">
+    <h1>Property Management Application</h1>
+    <p>
+        A simple platform for owners, tenants, and admins to manage properties,
+        agreements, rent workflow, and communication.
+    </p>
+    <a class="btn" href="{{ url_for('main.login') }}">Get Started</a>
+</section>
+{% endblock %}

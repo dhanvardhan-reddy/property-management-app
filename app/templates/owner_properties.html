@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Owner Properties</h1>
+
+<div class="form-card">
+    <h2>Add Property</h2>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+
+        <label>{{ form.title.label }}</label>
+        {{ form.title(class="input") }}
+
+        <label>{{ form.location.label }}</label>
+        {{ form.location(class="input") }}
+
+        <label>{{ form.rent_amount.label }}</label>
+        {{ form.rent_amount(class="input") }}
+
+        <label>{{ form.description.label }}</label>
+        {{ form.description(class="input") }}
+
+        {{ form.submit(class="btn") }}
+    </form>
+</div>
+
+<h2>My Listed Properties</h2>
+
+{% for property in properties %}
+<div class="form-card">
+    <h3>{{ property.title }}</h3>
+    <p><strong>Location:</strong> {{ property.location }}</p>
+    <p><strong>Rent:</strong> ₹{{ property.rent_amount }}</p>
+    <p><strong>Description:</strong> {{ property.description }}</p>
+</div>
+{% else %}
+<p>No properties added yet.</p>
+{% endfor %}
+{% endblock %}

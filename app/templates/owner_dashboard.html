@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Owner Dashboard</h1>
+<p>Welcome, Owner. Here you can manage your properties and tenants.</p>
+
+<a class="btn" href="{{ url_for('main.owner_properties') }}">Manage Properties</a>
+{% endblock %}
